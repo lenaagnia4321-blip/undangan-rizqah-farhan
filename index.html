@@ -32,8 +32,40 @@
     .toolbar { display:flex; gap:8px; }
     .icon-btn { border:1px solid #cfdae4; background:white; color:var(--blue); border-radius:50px; padding:9px 12px; font-size:.85rem; cursor:pointer; }
     main { width:100%; }
-    .design-page { width:100%; max-width:1000px; margin:0 auto; padding:0; line-height:0; background:white; }
-    .design-page img { display:block; width:100%; height:auto; }
+    
+.design-page {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  line-height: 0;
+  background: white;
+  overflow: hidden;
+}
+
+.design-page img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Animasi lembut saat gambar muncul */
+@media (prefers-reduced-motion: no-preference) {
+  .design-page img {
+    animation: fadeInPage 0.8s ease both;
+  }
+
+  @keyframes fadeInPage {
+    from {
+      opacity: 0.65;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
     .feature-panel { max-width:850px; margin:0 auto; padding:30px 18px; text-align:center; line-height:1.5; }
     .feature-panel h2 { font:italic 1.8rem Georgia,serif; color:var(--blue); margin:0 0 12px; }
     .countdown { display:flex; justify-content:center; gap:10px; margin:20px auto 8px; flex-wrap:wrap; }
