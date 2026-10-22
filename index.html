@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eaf2f8">
+  <meta name="description" content="Undangan pernikahan Rizqah dan Farhan, Sabtu 28 November 2026.">
+  <title>Rizqah & Farhan — Undangan Pernikahan</title>
+  <link rel="preload" as="image" href="assets/01-sampul.jpg">
+  <style>
+    :root { --blue:#315b7e; --blue2:#dce8f1; --ink:#242b33; --paper:#f8fbfd; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:Arial, Helvetica, sans-serif; }
+    body.locked { overflow:hidden; }
+    .cover-gate { position:fixed; inset:0; z-index:20; display:grid; place-items:center; padding:18px;
+      background:linear-gradient(160deg,rgba(237,245,251,.90),rgba(255,255,255,.96)),url("assets/01-sampul.jpg") center/cover; }
+    .envelope { width:min(420px,94vw); text-align:center; padding:24px 18px 30px; border:1px solid #c7d8e6; border-radius:20px; background:rgba(255,255,255,.88); box-shadow:0 18px 50px #294d6720; }
+    .envelope .mini { color:var(--blue); letter-spacing:.14em; text-transform:uppercase; font-size:.72rem; }
+    .envelope h1 { font-family:Georgia,serif; font-size:clamp(2rem,8vw,3rem); font-weight:normal; margin:14px 0 8px; }
+    .envelope p { line-height:1.6; margin:8px 0 20px; }
+    .envelope-art { font-size:3.8rem; margin:6px auto 8px; animation:float 2.6s ease-in-out infinite; }
+    .btn { border:0; cursor:pointer; border-radius:999px; padding:13px 20px; background:var(--blue); color:white; font-size:1rem; text-decoration:none; display:inline-flex; justify-content:center; align-items:center; gap:8px; }
+    .btn.secondary { background:#e5edf4; color:#24445e; border:1px solid #c7d8e6; }
+    .btn:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline:3px solid #7ba7cb; outline-offset:3px; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+    .cover-gate.opening .envelope { animation:fadeUp .55s ease reverse forwards; }
+    .cover-gate.hide { display:none; }
+    header { position:sticky; top:0; z-index:10; display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 14px; background:#ffffffed; backdrop-filter:blur(10px); border-bottom:1px solid #e3ebf1; }
+    .brand { font-family:Georgia,serif; font-size:1rem; color:var(--blue); }
+    .toolbar { display:flex; gap:8px; }
+    .icon-btn { border:1px solid #cfdae4; background:white; color:var(--blue); border-radius:50px; padding:9px 12px; font-size:.85rem; cursor:pointer; }
+    main { width:100%; }
+    .design-page { width:100%; max-width:1000px; margin:0 auto; padding:0; line-height:0; background:white; }
+    .design-page img { display:block; width:100%; height:auto; }
+    .feature-panel { max-width:850px; margin:0 auto; padding:30px 18px; text-align:center; line-height:1.5; }
+    .feature-panel h2 { font:italic 1.8rem Georgia,serif; color:var(--blue); margin:0 0 12px; }
+    .countdown { display:flex; justify-content:center; gap:10px; margin:20px auto 8px; flex-wrap:wrap; }
+    .count-box { min-width:66px; padding:12px 10px; border-radius:14px; background:#e8f0f6; border:1px solid #d1e0eb; }
+    .count-box strong { display:block; font-size:1.5rem; color:var(--blue); }
+    .count-box span { font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+    .rsvp-card { max-width:650px; margin:0 auto 34px; padding:24px 18px; border-radius:20px; background:#fff; border:1px solid #d8e4ed; box-shadow:0 10px 30px #294d6710; }
+    .rsvp-card h2 { text-align:center; font:italic 1.8rem Georgia,serif; color:var(--blue); margin:0 0 8px; }
+    .rsvp-card p { text-align:center; color:#5b6570; margin:0 0 20px; }
+    form { display:grid; gap:14px; }
+    label { display:grid; gap:6px; text-align:left; font-size:.92rem; font-weight:600; }
+    input,select,textarea { width:100%; padding:13px 14px; border:1px solid #c7d4df; border-radius:10px; font:inherit; background:#fff; color:#202a33; }
+    textarea { min-height:100px; resize:vertical; }
+    .form-note { font-size:.85rem; line-height:1.5; color:#66737e; text-align:left; }
+    #formStatus { min-height:1.5em; font-size:.9rem; text-align:center; margin-top:10px; }
+    .action-row { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:18px; }
+    footer { text-align:center; padding:28px 16px 44px; color:#65717d; font-size:.85rem; }
+    @media(min-width:760px) { .design-page { padding:0 12px; } .feature-panel { padding:42px 22px; } }
+    @media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation:none!important; transition:none!important; } }
+  </style>
+</head>
+<body class="locked">
+  <section class="cover-gate" id="coverGate" aria-label="Sampul undangan">
+    <div class="envelope">
+      <div class="mini">Undangan Pernikahan</div>
+      <div class="envelope-art" aria-hidden="true">💌</div>
+      <h1>Rizqah &amp; Farhan</h1>
+      <p>Sabtu, 28 November 2026<br>Dengan hormat, kami mengundang Anda untuk hadir.</p>
+      <button class="btn" id="openInvitation" type="button">Buka Undangan</button>
+      <p style="font-size:.78rem;color:#6d7b87;margin-top:14px">Mohon maaf apabila terdapat kesalahan penulisan nama atau gelar.</p>
+    </div>
+  </section>
+
+  <header>
+    <div class="brand">Rizqah &amp; Farhan</div>
+    <div class="toolbar">
+      <button class="icon-btn" id="musicButton" type="button" aria-pressed="false">♫ Musik: mati</button>
+      <button class="icon-btn" id="shareButton" type="button">Bagikan</button>
+    </div>
+  </header>
+
+  <main id="invitation">
+    <section class="design-page"><img src="assets/01-sampul.jpg" alt="Sampul undangan pernikahan Rizqah dan Farhan" fetchpriority="high"></section>
+    <section class="design-page"><img src="assets/02-mempelai.jpg" alt="Nama kedua mempelai dan keluarga" loading="lazy"></section>
+
+    <section class="feature-panel" aria-label="Hitung mundur pernikahan">
+      <h2>Menuju Hari Bahagia</h2>
+      <p>Sabtu, 28 November 2026 · Pukul 08.00 WIB</p>
+      <div class="countdown" id="countdown">
+        <div class="count-box"><strong>--</strong><span>Hari</span></div>
+        <div class="count-box"><strong>--</strong><span>Jam</span></div>
+        <div class="count-box"><strong>--</strong><span>Menit</span></div>
+        <div class="count-box"><strong>--</strong><span>Detik</span></div>
+      </div>
+    </section>
+
+    <section class="design-page"><img src="assets/03-tanggal-acara.jpg" alt="Tanggal, akad nikah, dan resepsi" loading="lazy"></section>
+    <section class="design-page"><img src="assets/04-lokasi.jpg" alt="Lokasi akad dan resepsi di Joglo Kemandoran Bekasi" loading="lazy"></section>
+    <section class="feature-panel">
+      <h2>Lokasi Acara</h2>
+      <p>Joglo Kemandoran Bekasi<br>Jl. Kemandoran No. 56, RT.006/RW.022, Pekayon Jaya, Kec. Bekasi Selatan, Kota Bekasi, Jawa Barat 17148</p>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Joglo%20Kemandoran%20Bekasi%2C%20Jl.%20Kemandoran%20No.56%2C%20Pekayon%20Jaya%2C%20Bekasi%20Selatan" target="_blank" rel="noopener">Buka Google Maps</a>
+    </section>
+    <section class="design-page"><img src="assets/05-galeri.jpg" alt="Galeri foto Rizqah dan Farhan" loading="lazy"></section>
+
+    <section class="rsvp-card" id="rsvp">
+      <h2>Konfirmasi Kehadiran</h2>
+      <p>Mohon bantu kami mempersiapkan acara dengan mengisi konfirmasi berikut.</p>
+      <form id="rsvpForm">
+        <label>Nama
+          <input name="name" autocomplete="name" required maxlength="100" placeholder="Nama Anda">
+        </label>
+        <label>Konfirmasi kehadiran
+          <select name="attendance" required>
+            <option value="">Pilih kehadiran</option>
+            <option value="Hadir">Insyaallah hadir</option>
+            <option value="Tidak hadir">Mohon maaf, tidak bisa hadir</option>
+          </select>
+        </label>
+        <label>Jumlah orang
+          <select name="guests" required>
+            <option value="">Pilih jumlah</option><option value="1">1 orang</option><option value="2">2 orang</option><option value="3">3 orang</option><option value="4">4 orang</option><option value="5">5 orang</option>
+          </select>
+        </label>
+        <label>Ucapan atau doa
+          <textarea name="message" maxlength="1000" placeholder="Tuliskan doa dan ucapan untuk kedua mempelai"></textarea>
+        </label>
+        <button class="btn" type="submit">Kirim Konfirmasi</button>
+        <div id="formStatus" role="status" aria-live="polite"></div>
+        <div class="form-note">Formulir ini memerlukan pengaturan Google Apps Script agar jawaban tamu tersimpan ke Google Sheets. Lihat file PETUNJUK.md dalam paket website.</div>
+      </form>
+    </section>
+
+    <section class="design-page"><img src="assets/07-hadiah.jpg" alt="Informasi hadiah pernikahan dan rekening" loading="lazy"></section>
+    <section class="feature-panel">
+      <h2>Tanda Kasih</h2>
+      <p>Terima kasih atas doa dan perhatian Anda.</p>
+      <div class="action-row">
+        <button class="btn secondary copy-btn" data-copy="1670002903168" type="button">Salin rekening Rizqah</button>
+        <button class="btn secondary copy-btn" data-copy="1330024027757" type="button">Salin rekening Farhan</button>
+        <button class="btn secondary copy-btn" data-copy="Perumahan Antariksa Permai 1 Blok A2 No. 25, Bojong Nangka, Gunung Putri, Bogor" type="button">Salin alamat hadiah</button>
+      </div>
+      <p id="copyStatus" role="status" aria-live="polite"></p>
+    </section>
+    <section class="design-page"><img src="assets/08-penutup.jpg" alt="Ucapan terima kasih dari Rizqah dan Farhan" loading="lazy"></section>
+  </main>
+
+  <footer>Rizqah &amp; Farhan · 28 November 2026<br>Dibuat dengan penuh kasih.</footer>
+
+  <audio id="weddingMusic" loop preload="none">
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    // 1) Ganti URL ini setelah deploy Google Apps Script, sesuai PETUNJUK.md.
+    const RSVP_ENDPOINT = "";
+
+    const gate = document.getElementById("coverGate");
+    document.getElementById("openInvitation").addEventListener("click", () => {
+      gate.classList.add("opening");
+      setTimeout(() => {
+        gate.classList.add("hide");
+        document.body.classList.remove("locked");
+        document.getElementById("invitation").scrollIntoView({behavior:"smooth"});
+      }, 420);
+    });
+
+    const eventDate = new Date("2026-11-28T08:00:00+07:00").getTime();
+    const countdown = document.getElementById("countdown");
+    function updateCountdown() {
+      let diff = eventDate - Date.now();
+      if (diff <= 0) {
+        countdown.innerHTML = '<p>Hari bahagia telah tiba. Semoga acara berjalan lancar!</p>';
+        return;
+      }
+      const values = [
+        Math.floor(diff / 86400000),
+        Math.floor((diff % 86400000) / 3600000),
+        Math.floor((diff % 3600000) / 60000),
+        Math.floor((diff % 60000) / 1000)
+      ];
+      const labels = ["Hari","Jam","Menit","Detik"];
+      countdown.innerHTML = values.map((v,i) => `<div class="count-box"><strong>${v}</strong><span>${labels[i]}</span></div>`).join("");
+    }
+    updateCountdown(); setInterval(updateCountdown, 1000);
+
+    const music = document.getElementById("weddingMusic");
+    const musicButton = document.getElementById("musicButton");
+    musicButton.addEventListener("click", async () => {
+      if (music.paused) {
+        try {
+          await music.play();
+          musicButton.textContent = "♫ Musik: nyala";
+          musicButton.setAttribute("aria-pressed","true");
+        } catch (e) {
+          alert("Tambahkan file assets/music.mp3 terlebih dahulu. Gunakan musik yang kamu punya hak untuk memakainya.");
+        }
+      } else {
+        music.pause();
+        musicButton.textContent = "♫ Musik: mati";
+        musicButton.setAttribute("aria-pressed","false");
+      }
+    });
+
+    document.querySelectorAll(".copy-btn").forEach(btn => btn.addEventListener("click", async () => {
+      const text = btn.dataset.copy;
+      try {
+        await navigator.clipboard.writeText(text);
+        document.getElementById("copyStatus").textContent = "Berhasil disalin.";
+      } catch(e) {
+        const input = document.createElement("textarea");
+        input.value = text; document.body.appendChild(input); input.select();
+        document.execCommand("copy"); input.remove();
+        document.getElementById("copyStatus").textContent = "Teks disalin.";
+      }
+    }));
+
+    document.getElementById("shareButton").addEventListener("click", async () => {
+      const shareData = {title:document.title, text:"Undangan pernikahan Rizqah & Farhan", url:location.href};
+      try {
+        if (navigator.share) await navigator.share(shareData);
+        else { await navigator.clipboard.writeText(location.href); alert("Link undangan disalin."); }
+      } catch(e) {}
+    });
+
+    document.getElementById("rsvpForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const status = document.getElementById("formStatus");
+      if (!RSVP_ENDPOINT) {
+        status.textContent = "Form belum terhubung ke penyimpanan. Ikuti PETUNJUK.md untuk mengaktifkan Google Sheets.";
+        return;
+      }
+      const data = Object.fromEntries(new FormData(e.currentTarget).entries());
+      data.timestamp = new Date().toISOString();
+      status.textContent = "Mengirim konfirmasi…";
+      try {
+        await fetch(RSVP_ENDPOINT, {
+          method:"POST",
+          mode:"no-cors",
+          headers:{"Content-Type":"text/plain;charset=utf-8"},
+          body:JSON.stringify(data)
+        });
+        status.textContent = "Terima kasih! Konfirmasi sudah dikirim. Jika perlu, hubungi keluarga untuk memastikan data diterima.";
+        e.currentTarget.reset();
+      } catch(err) {
+        status.textContent = "Pengiriman gagal. Silakan coba lagi atau hubungi keluarga.";
+      }
+    });
+  </script>
+</body>
+</html>
