@@ -1,279 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#eaf2f8">
-  <meta name="description" content="Undangan pernikahan Rizqah dan Farhan, Sabtu 28 November 2026.">
-  <title>Rizqah & Farhan — Undangan Pernikahan</title>
-  <link rel="preload" as="image" href="01-sampul.jpg">
-  <style>
-    :root { --blue:#315b7e; --blue2:#dce8f1; --ink:#242b33; --paper:#f8fbfd; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--paper); color:var(--ink); font-family:Arial, Helvetica, sans-serif; }
-    body.locked { overflow:hidden; }
-    .cover-gate { position:fixed; inset:0; z-index:20; display:grid; place-items:center; padding:18px;
-      background:linear-gradient(160deg,rgba(237,245,251,.90),rgba(255,255,255,.96)),url("01-sampul.jpg") center/cover; }
-    .envelope { width:min(420px,94vw); text-align:center; padding:24px 18px 30px; border:1px solid #c7d8e6; border-radius:20px; background:rgba(255,255,255,.88); box-shadow:0 18px 50px #294d6720; }
-    .envelope .mini { color:var(--blue); letter-spacing:.14em; text-transform:uppercase; font-size:.72rem; }
-    .envelope h1 { font-family:Georgia,serif; font-size:clamp(2rem,8vw,3rem); font-weight:normal; margin:14px 0 8px; }
-    .envelope p { line-height:1.6; margin:8px 0 20px; }
-    .envelope-art { font-size:3.8rem; margin:6px auto 8px; animation:float 2.6s ease-in-out infinite; }
-    .btn { border:0; cursor:pointer; border-radius:999px; padding:13px 20px; background:var(--blue); color:white; font-size:1rem; text-decoration:none; display:inline-flex; justify-content:center; align-items:center; gap:8px; }
-    .btn.secondary { background:#e5edf4; color:#24445e; border:1px solid #c7d8e6; }
-    .btn:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline:3px solid #7ba7cb; outline-offset:3px; }
-    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
-    @keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
-    .cover-gate.opening .envelope { animation:fadeUp .55s ease reverse forwards; }
-    .cover-gate.hide { display:none; }
-    header { position:sticky; top:0; z-index:10; display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 14px; background:#ffffffed; backdrop-filter:blur(10px); border-bottom:1px solid #e3ebf1; }
-    .brand { font-family:Georgia,serif; font-size:1rem; color:var(--blue); }
-    .toolbar { display:flex; gap:8px; }
-    .icon-btn { border:1px solid #cfdae4; background:white; color:var(--blue); border-radius:50px; padding:9px 12px; font-size:.85rem; cursor:pointer; }
-    main { width:100%; }
-    
-.design-page {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0;
-  line-height: 0;
-  background: white;
-  overflow: hidden;
-}
-
-.design-page img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* Animasi lembut saat gambar muncul */
-@media (prefers-reduced-motion: no-preference) {
-  .design-page img {
-    animation: fadeInPage 0.8s ease both;
-  }
-
-  @keyframes fadeInPage {
-    from {
-      opacity: 0.65;
-      transform: translateY(12px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-}
-    .feature-panel { max-width:850px; margin:0 auto; padding:30px 18px; text-align:center; line-height:1.5; }
-    .feature-panel h2 { font:italic 1.8rem Georgia,serif; color:var(--blue); margin:0 0 12px; }
-    .countdown { display:flex; justify-content:center; gap:10px; margin:20px auto 8px; flex-wrap:wrap; }
-    .count-box { min-width:66px; padding:12px 10px; border-radius:14px; background:#e8f0f6; border:1px solid #d1e0eb; }
-    .count-box strong { display:block; font-size:1.5rem; color:var(--blue); }
-    .count-box span { font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
-    .rsvp-card { max-width:650px; margin:0 auto 34px; padding:24px 18px; border-radius:20px; background:#fff; border:1px solid #d8e4ed; box-shadow:0 10px 30px #294d6710; }
-    .rsvp-card h2 { text-align:center; font:italic 1.8rem Georgia,serif; color:var(--blue); margin:0 0 8px; }
-    .rsvp-card p { text-align:center; color:#5b6570; margin:0 0 20px; }
-    form { display:grid; gap:14px; }
-    label { display:grid; gap:6px; text-align:left; font-size:.92rem; font-weight:600; }
-    input,select,textarea { width:100%; padding:13px 14px; border:1px solid #c7d4df; border-radius:10px; font:inherit; background:#fff; color:#202a33; }
-    textarea { min-height:100px; resize:vertical; }
-    .form-note { font-size:.85rem; line-height:1.5; color:#66737e; text-align:left; }
-    #formStatus { min-height:1.5em; font-size:.9rem; text-align:center; margin-top:10px; }
-    .action-row { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:18px; }
-    footer { text-align:center; padding:28px 16px 44px; color:#65717d; font-size:.85rem; }
-    @media(min-width:760px) { .design-page { padding:0 12px; } .feature-panel { padding:42px 22px; } }
-    @media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation:none!important; transition:none!important; } }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#eef4f8">
+<meta name="description" content="Undangan pernikahan Rizqah dan Farhan, Sabtu 28 November 2026.">
+<title>Rizqah &amp; Farhan | Undangan Pernikahan</title>
+<style>
+:root{--blue:#315b7e;--pale:#e6eef5;--ink:#20242a}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:#f8fbfd;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+body.locked{overflow:hidden}
+button,a,input,select,textarea{font:inherit}
+button,a{ -webkit-tap-highlight-color:transparent}
+.cover{position:fixed;inset:0;z-index:100;background:#f7fbff;display:grid;place-items:center;padding:18px;transition:opacity .4s}
+.cover.hide{display:none}
+.cover-card{width:min(430px,95vw);padding:28px 20px;text-align:center;background:#ffffffed;border:1px solid #d4e1eb;border-radius:20px;box-shadow:0 12px 40px #1e42601c}
+.cover-card .eyebrow{letter-spacing:.16em;font-size:.75rem;color:var(--blue)}
+.cover-card h1{font:normal clamp(2.2rem,8vw,3.4rem) Georgia,serif;margin:16px 0}
+.cover-card p{line-height:1.6}
+.btn{border:0;border-radius:999px;background:var(--blue);color:#fff;padding:12px 20px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn.light{background:#e2ebf2;color:#274660;border:1px solid #c8d8e5}
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:9px 12px;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid #dce6ee}
+.brand{font:1.05rem Georgia,serif;color:var(--blue);white-space:nowrap}
+.top-actions{display:flex;gap:6px}
+.smallbtn{border:1px solid #cad9e5;background:white;color:var(--blue);border-radius:20px;padding:9px 11px;cursor:pointer;font-size:.82rem}
+main{width:100%}
+.page{position:relative;width:100%;max-width:1000px;margin:0 auto;line-height:0;background:#fff;overflow:hidden}
+.page img{display:block;width:100%;height:auto}
+.hotspot{position:absolute;display:block;z-index:5;margin:0;padding:0;border:0;background:transparent;color:transparent;cursor:pointer;line-height:normal;border-radius:6px}
+.hotspot:focus-visible{outline:3px dashed #315b7e;outline-offset:2px;background:#315b7e20}
+.block{max-width:850px;margin:0 auto;padding:30px 16px;text-align:center;line-height:1.5}
+.block h2,.rsvp h2{font:italic clamp(1.6rem,5vw,2rem) Georgia,serif;color:var(--blue);margin:0 0 10px}
+.block p{margin:8px 0}
+.countdown{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin:18px auto 4px}
+.count{min-width:65px;background:#e9f0f6;border:1px solid #d5e2ec;border-radius:13px;padding:11px 9px}
+.count strong{display:block;font-size:1.45rem;color:var(--blue)}
+.count span{font-size:.7rem;text-transform:uppercase;letter-spacing:.05em}
+.rsvp{max-width:650px;margin:24px auto 32px;padding:24px 17px;background:#fff;border:1px solid #d8e4ed;border-radius:18px;box-shadow:0 10px 28px #24445e12;line-height:1.5}
+.rsvp h2,.rsvp>p{text-align:center}.rsvp>p{color:#65717c}
+form{display:grid;gap:13px}label{display:grid;gap:6px;text-align:left;font-size:.92rem;font-weight:600}
+input,select,textarea{width:100%;border:1px solid #c8d5df;border-radius:10px;padding:12px 13px;background:#fff;color:#222;font:inherit}
+textarea{min-height:95px;resize:vertical}
+#rsvpStatus{min-height:1.4em;text-align:center;font-size:.9rem}
+.note{font-size:.8rem;color:#687783;font-weight:normal}
+#toast{position:fixed;z-index:120;bottom:82px;left:50%;transform:translate(-50%,15px);opacity:0;pointer-events:none;transition:.2s;background:#263d50;color:white;padding:12px 17px;border-radius:99px;max-width:90vw;text-align:center;font-size:.9rem;line-height:1.35}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+.bottomnav{position:fixed;z-index:40;bottom:0;left:0;right:0;display:flex;gap:2px;justify-content:space-around;padding:7px 4px calc(7px + env(safe-area-inset-bottom));background:#ffffffed;border-top:1px solid #dce6ee;backdrop-filter:blur(12px)}
+.bottomnav a{flex:1;text-align:center;text-decoration:none;color:var(--blue);font-size:.7rem;padding:7px 2px;border-radius:9px}
+.bottomnav a:active{background:#e6eef5}
+footer{text-align:center;color:#687783;font-size:.82rem;line-height:1.6;padding:22px 16px 92px}
+@keyframes fadeUp{from{opacity:.35;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:no-preference){.page img{animation:fadeUp .65s ease both}}
+@media(min-width:760px){.page{padding:0 10px}.block{padding:36px 22px}}
+@media(max-width:370px){.brand{font-size:.9rem}.smallbtn{font-size:.75rem;padding:8px}.bottomnav a{font-size:.64rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
 </head>
 <body class="locked">
-  <section class="cover-gate" id="coverGate" aria-label="Sampul undangan">
-    <div class="envelope">
-      <div class="mini">Undangan Pernikahan</div>
-      <div class="envelope-art" aria-hidden="true">💌</div>
-      <h1>Rizqah &amp; Farhan</h1>
-      <p>Sabtu, 28 November 2026<br>Dengan hormat, kami mengundang Anda untuk hadir.</p>
-      <button class="btn" id="openInvitation" type="button">Buka Undangan</button>
-      <p style="font-size:.78rem;color:#6d7b87;margin-top:14px">Mohon maaf apabila terdapat kesalahan penulisan nama atau gelar.</p>
-    </div>
-  </section>
+<section class="cover" id="cover" aria-label="Pembuka undangan">
+ <div class="cover-card">
+  <div class="eyebrow">UNDANGAN PERNIKAHAN</div>
+  <h1>Rizqah &amp; Farhan</h1>
+  <p>Sabtu, 28 November 2026</p>
+  <button class="btn" id="openBtn" type="button">Buka Undangan</button>
+ </div>
+</section>
+<header class="topbar">
+ <div class="brand">Rizqah &amp; Farhan</div>
+ <div class="top-actions">
+  <button class="smallbtn" id="musicBtn" type="button" aria-pressed="false">♫ Musik</button>
+  <button class="smallbtn" id="shareBtn" type="button">Bagikan</button>
+ </div>
+</header>
+<main id="invitation">
+ <section class="page" id="sampul"><img src="01-sampul.jpg" alt="Sampul undangan Rizqah dan Farhan" fetchpriority="high"></section>
+ <section class="page" id="mempelai"><img src="02-mempelai.jpg" alt="Informasi kedua mempelai dan keluarga" loading="lazy"></section>
 
-  <header>
-    <div class="brand">Rizqah &amp; Farhan</div>
-    <div class="toolbar">
-      <button class="icon-btn" id="musicButton" type="button" aria-pressed="false">♫ Musik: mati</button>
-      <button class="icon-btn" id="shareButton" type="button">Bagikan</button>
-    </div>
-  </header>
+ <section class="block" id="hitung-mundur">
+  <h2>Menuju Hari Bahagia</h2><p>Sabtu, 28 November 2026 · Pukul 08.00 WIB</p>
+  <div class="countdown" id="countdown" aria-live="polite"></div>
+ </section>
 
-  <main id="invitation">
-    <section class="design-page"><img src="01-sampul.jpg" alt="Sampul undangan pernikahan Rizqah dan Farhan" fetchpriority="high"></section>
-    <section class="design-page"><img src="02-mempelai.jpg" alt="Nama kedua mempelai dan keluarga" loading="lazy"></section>
-
-    <section class="feature-panel" aria-label="Hitung mundur pernikahan">
-      <h2>Menuju Hari Bahagia</h2>
-      <p>Sabtu, 28 November 2026 · Pukul 08.00 WIB</p>
-      <div class="countdown" id="countdown">
-        <div class="count-box"><strong>--</strong><span>Hari</span></div>
-        <div class="count-box"><strong>--</strong><span>Jam</span></div>
-        <div class="count-box"><strong>--</strong><span>Menit</span></div>
-        <div class="count-box"><strong>--</strong><span>Detik</span></div>
-      </div>
-    </section>
-
-    <section class="design-page"><img src="03-tanggal-acara.jpg" alt="Tanggal, akad nikah, dan resepsi" loading="lazy"></section>
-    <section class="design-page"><img src="04-lokasi.jpg" alt="Lokasi akad dan resepsi di Joglo Kemandoran Bekasi" loading="lazy"></section>
-    <section class="feature-panel">
-      <h2>Lokasi Acara</h2>
-      <p>Joglo Kemandoran Bekasi<br>Jl. Kemandoran No. 56, RT.006/RW.022, Pekayon Jaya, Kec. Bekasi Selatan, Kota Bekasi, Jawa Barat 17148</p>
-      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Joglo%20Kemandoran%20Bekasi%2C%20Jl.%20Kemandoran%20No.56%2C%20Pekayon%20Jaya%2C%20Bekasi%20Selatan" target="_blank" rel="noopener">Buka Google Maps</a>
-    </section>
-    <section class="design-page"><img src="05-galeri.jpg" alt="Galeri foto Rizqah dan Farhan" loading="lazy"></section>
-
-    <section class="rsvp-card" id="rsvp">
-      <h2>Konfirmasi Kehadiran</h2>
-      <p>Mohon bantu kami mempersiapkan acara dengan mengisi konfirmasi berikut.</p>
-      <form id="rsvpForm">
-        <label>Nama
-          <input name="name" autocomplete="name" required maxlength="100" placeholder="Nama Anda">
-        </label>
-        <label>Konfirmasi kehadiran
-          <select name="attendance" required>
-            <option value="">Pilih kehadiran</option>
-            <option value="Hadir">Insyaallah hadir</option>
-            <option value="Tidak hadir">Mohon maaf, tidak bisa hadir</option>
-          </select>
-        </label>
-        <label>Jumlah orang
-          <select name="guests" required>
-            <option value="">Pilih jumlah</option><option value="1">1 orang</option><option value="2">2 orang</option><option value="3">3 orang</option><option value="4">4 orang</option><option value="5">5 orang</option>
-          </select>
-        </label>
-        <label>Ucapan atau doa
-          <textarea name="message" maxlength="1000" placeholder="Tuliskan doa dan ucapan untuk kedua mempelai"></textarea>
-        </label>
-        <button class="btn" type="submit">Kirim Konfirmasi</button>
-        <div id="formStatus" role="status" aria-live="polite"></div>
-        <div class="form-note">Formulir ini memerlukan pengaturan Google Apps Script agar jawaban tamu tersimpan ke Google Sheets. Lihat file PETUNJUK.md dalam paket website.</div>
-      </form>
-    </section>
-
-    <section class="design-page"><img src="07-hadiah.jpg" alt="Informasi hadiah pernikahan dan rekening" loading="lazy"></section>
-    <section class="feature-panel">
-      <h2>Tanda Kasih</h2>
-      <p>Terima kasih atas doa dan perhatian Anda.</p>
-      <div class="action-row">
-        <button class="btn secondary copy-btn" data-copy="1670002903168" type="button">Salin rekening Rizqah</button>
-        <button class="btn secondary copy-btn" data-copy="1330024027757" type="button">Salin rekening Farhan</button>
-        <button class="btn secondary copy-btn" data-copy="Perumahan Antariksa Permai 1 Blok A2 No. 25, Bojong Nangka, Gunung Putri, Bogor" type="button">Salin alamat hadiah</button>
-      </div>
-      <p id="copyStatus" role="status" aria-live="polite"></p>
-    </section>
-    <section class="design-page"><img src="08-penutup.jpg" alt="Ucapan terima kasih dari Rizqah dan Farhan" loading="lazy"></section>
-  </main>
-
-  <footer>Rizqah &amp; Farhan · 28 November 2026<br>Dibuat dengan penuh kasih.</footer>
-
-  <audio id="weddingMusic" loop preload="none">
-    <source src="assets/music.mp3" type="audio/mpeg">
-  </audio>
-
-  <script>
-    // 1) Ganti URL ini setelah deploy Google Apps Script, sesuai PETUNJUK.md.
-    const RSVP_ENDPOINT = "";
-
-    const gate = document.getElementById("coverGate");
-    document.getElementById("openInvitation").addEventListener("click", () => {
-      gate.classList.add("opening");
-      setTimeout(() => {
-        gate.classList.add("hide");
-        document.body.classList.remove("locked");
-        document.getElementById("invitation").scrollIntoView({behavior:"smooth"});
-      }, 420);
-    });
-
-    const eventDate = new Date("2026-11-28T08:00:00+07:00").getTime();
-    const countdown = document.getElementById("countdown");
-    function updateCountdown() {
-      let diff = eventDate - Date.now();
-      if (diff <= 0) {
-        countdown.innerHTML = '<p>Hari bahagia telah tiba. Semoga acara berjalan lancar!</p>';
-        return;
-      }
-      const values = [
-        Math.floor(diff / 86400000),
-        Math.floor((diff % 86400000) / 3600000),
-        Math.floor((diff % 3600000) / 60000),
-        Math.floor((diff % 60000) / 1000)
-      ];
-      const labels = ["Hari","Jam","Menit","Detik"];
-      countdown.innerHTML = values.map((v,i) => `<div class="count-box"><strong>${v}</strong><span>${labels[i]}</span></div>`).join("");
-    }
-    updateCountdown(); setInterval(updateCountdown, 1000);
-
-    const music = document.getElementById("weddingMusic");
-    const musicButton = document.getElementById("musicButton");
-    musicButton.addEventListener("click", async () => {
-      if (music.paused) {
-        try {
-          await music.play();
-          musicButton.textContent = "♫ Musik: nyala";
-          musicButton.setAttribute("aria-pressed","true");
-        } catch (e) {
-          alert("music.mp3 terlebih dahulu. Gunakan musik yang kamu punya hak untuk memakainya.");
-        }
-      } else {
-        music.pause();
-        musicButton.textContent = "♫ Musik: mati";
-        musicButton.setAttribute("aria-pressed","false");
-      }
-    });
-
-    document.querySelectorAll(".copy-btn").forEach(btn => btn.addEventListener("click", async () => {
-      const text = btn.dataset.copy;
-      try {
-        await navigator.clipboard.writeText(text);
-        document.getElementById("copyStatus").textContent = "Berhasil disalin.";
-      } catch(e) {
-        const input = document.createElement("textarea");
-        input.value = text; document.body.appendChild(input); input.select();
-        document.execCommand("copy"); input.remove();
-        document.getElementById("copyStatus").textContent = "Teks disalin.";
-      }
-    }));
-
-    document.getElementById("shareButton").addEventListener("click", async () => {
-      const shareData = {title:document.title, text:"Undangan pernikahan Rizqah & Farhan", url:location.href};
-      try {
-        if (navigator.share) await navigator.share(shareData);
-        else { await navigator.clipboard.writeText(location.href); alert("Link undangan disalin."); }
-      } catch(e) {}
-    });
-
-    document.getElementById("rsvpForm").addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const status = document.getElementById("formStatus");
-      if (!RSVP_ENDPOINT) {
-        status.textContent = "Form belum terhubung ke penyimpanan. Ikuti PETUNJUK.md untuk mengaktifkan Google Sheets.";
-        return;
-      }
-      const data = Object.fromEntries(new FormData(e.currentTarget).entries());
-      data.timestamp = new Date().toISOString();
-      status.textContent = "Mengirim konfirmasi…";
-      try {
-        await fetch(RSVP_ENDPOINT, {
-          method:"POST",
-          mode:"no-cors",
-          headers:{"Content-Type":"text/plain;charset=utf-8"},
-          body:JSON.stringify(data)
-        });
-        status.textContent = "Terima kasih! Konfirmasi sudah dikirim. Jika perlu, hubungi keluarga untuk memastikan data diterima.";
-        e.currentTarget.reset();
-      } catch(err) {
-        status.textContent = "Pengiriman gagal. Silakan coba lagi atau hubungi keluarga.";
-      }
-    });
-  </script>
+ <section class="page" id="tanggal"><img src="03-tanggal-acara.jpg" alt="Tanggal dan jadwal acara" loading="lazy"></section>
+ <section class="page" id="lokasi">
+  <img src="04-lokasi.jpg" alt="Lokasi akad dan resepsi di Joglo Kemandoran Bekasi" loading="lazy">
+  <a class="hotspot" style="left:10%;top:48%;width:80%;height:23%" href="https://www.google.com/maps/search/?api=1&amp;query=Joglo+Kemandoran+Bekasi%2C+Jl.+Kemandoran+No.56%2C+Pekayon+Jaya%2C+Bekasi+Selatan%2C+Bekasi" target="_blank" rel="noopener" aria-label="Buka lokasi acara di Google Maps" title="Buka Google Maps"></a>
+ </section>
+ <section class="page" id="galeri"><img src="05-galeri.jpg" alt="Galeri foto Rizqah dan Farhan" loading="lazy"></section>
+ <section class="page" id="rsvp-desain">
+  <img src="06-rsvp-desain.jpg" alt="Desain konfirmasi kehadiran" loading="lazy">
+  <button class="hotspot" style="left:10%;top:74%;width:80%;height:11%" type="button" data-scroll="#rsvp" aria-label="Isi konfirmasi kehadiran" title="Isi RSVP"></button>
+ </section>
+ <section class="rsvp" id="rsvp">
+  <h2>Konfirmasi Kehadiran</h2>
+  <p>Mohon isi konfirmasi kehadiran dan doa untuk kedua mempelai.</p>
+  <form id="rsvpForm">
+   <label>Nama<input name="name" autocomplete="name" maxlength="100" required placeholder="Nama Anda"></label>
+   <label>Konfirmasi kehadiran<select name="attendance" required><option value="">Pilih kehadiran</option><option value="Hadir">Insyaallah hadir</option><option value="Tidak hadir">Mohon maaf, tidak bisa hadir</option></select></label>
+   <label>Jumlah orang<select name="guests" required><option value="">Pilih jumlah</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+   <label>Ucapan atau doa<textarea name="message" maxlength="1000" placeholder="Tulis ucapan atau doa"></textarea></label>
+   <button class="btn" type="submit">Kirim Konfirmasi</button>
+   <div id="rsvpStatus" role="status" aria-live="polite"></div>
+   <div class="note">Agar konfirmasi tersimpan dan bisa dilihat keluarga, sambungkan formulir ini ke Google Sheets menggunakan petunjuk di file Code.gs.</div>
+  </form>
+ </section>
+ <section class="page" id="hadiah">
+  <img src="07-hadiah.jpg" alt="Wedding Gift: rekening Rizqah dan Farhan serta alamat hadiah" loading="lazy">
+  <button class="hotspot" style="left:22%;top:49%;width:21%;height:7%" type="button" data-copy="1670002903168" aria-label="Salin rekening Rizqah" title="Salin rekening Rizqah"></button>
+  <button class="hotspot" style="left:60%;top:49%;width:21%;height:7%" type="button" data-copy="1330024027757" aria-label="Salin rekening Farhan" title="Salin rekening Farhan"></button>
+  <button class="hotspot" style="left:39%;top:86%;width:22%;height:7%" type="button" data-copy="Perumahan Antariksa Permai 1 Blok A2 No. 25, Bojong Nangka, Gunung Putri, Bogor" aria-label="Salin alamat hadiah" title="Salin alamat hadiah"></button>
+ </section>
+ <section class="page" id="penutup"><img src="08-penutup.jpg" alt="Ucapan terima kasih dari Rizqah dan Farhan" loading="lazy"></section>
+</main>
+<footer>Rizqah &amp; Farhan · 28 November 2026<br>Dibuat dengan penuh kasih.</footer>
+<nav class="bottomnav" aria-label="Navigasi undangan">
+ <a href="#sampul">Sampul</a><a href="#tanggal">Acara</a><a href="#lokasi">Lokasi</a><a href="#galeri">Galeri</a><a href="#rsvp">RSVP</a><a href="#hadiah">Hadiah</a>
+</nav>
+<div id="toast" role="status" aria-live="polite"></div>
+<audio id="weddingMusic" loop preload="none"><source src="Lagu.mp3" type="audio/mpeg"></audio>
+<script>
+/* Setelah Google Apps Script dipasang, tempel URL Web App di antara tanda kutip ini. */
+const RSVP_ENDPOINT = "";
+const $ = (selector) => document.querySelector(selector);
+$("#openBtn").addEventListener("click",()=>{$("#cover").classList.add("hide");document.body.classList.remove("locked");$("#sampul").scrollIntoView({behavior:"smooth"});});
+const eventTime = new Date("2026-11-28T08:00:00+07:00").getTime();
+function updateCountdown(){
+ const diff=eventTime-Date.now(), box=$("#countdown");
+ if(diff<=0){box.innerHTML="<p>Hari bahagia telah tiba. Semoga acara berjalan lancar!</p>";return;}
+ const vals=[Math.floor(diff/86400000),Math.floor(diff%86400000/3600000),Math.floor(diff%3600000/60000),Math.floor(diff%60000/1000)];
+ const labels=["Hari","Jam","Menit","Detik"];
+ box.innerHTML=vals.map((v,i)=>`<div class="count"><strong>${v}</strong><span>${labels[i]}</span></div>`).join("");
+}
+updateCountdown();setInterval(updateCountdown,1000);
+let toastTimeout;
+function toast(msg){const el=$("#toast");el.textContent=msg;el.classList.add("show");clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>el.classList.remove("show"),2300);}
+async function copyText(text){
+ try{await navigator.clipboard.writeText(text);toast("Berhasil disalin.");}
+ catch(e){const t=document.createElement("textarea");t.value=text;t.style.position="fixed";t.style.opacity="0";document.body.appendChild(t);t.select();const ok=document.execCommand("copy");t.remove();toast(ok?"Berhasil disalin.":"Salin manual: "+text);}
+}
+document.querySelectorAll("[data-copy]").forEach(b=>b.addEventListener("click",()=>copyText(b.dataset.copy)));
+document.querySelectorAll("[data-scroll]").forEach(b=>b.addEventListener("click",()=>$(b.dataset.scroll).scrollIntoView({behavior:"smooth"})));
+const music=$("#weddingMusic"), musicBtn=$("#musicBtn");
+musicBtn.addEventListener("click",async()=>{if(music.paused){try{await music.play();musicBtn.textContent="♫ Musik aktif";musicBtn.setAttribute("aria-pressed","true");}catch(e){toast("Pastikan file Lagu.mp3 ada di folder yang sama.");}}else{music.pause();musicBtn.textContent="♫ Musik";musicBtn.setAttribute("aria-pressed","false");}});
+$("#shareBtn").addEventListener("click",async()=>{const d={title:document.title,text:"Undangan pernikahan Rizqah & Farhan",url:location.href};try{if(navigator.share)await navigator.share(d);else{await navigator.clipboard.writeText(location.href);toast("Link undangan disalin.");}}catch(e){}});
+$("#rsvpForm").addEventListener("submit",async e=>{
+ e.preventDefault();const status=$("#rsvpStatus"),data=Object.fromEntries(new FormData(e.currentTarget).entries());
+ if(!RSVP_ENDPOINT){status.textContent="Form belum terhubung ke Google Sheets, jadi jawaban belum tersimpan. Pasang URL Web App pada kode terlebih dahulu.";return;}
+ data.timestamp=new Date().toISOString();status.textContent="Mengirim konfirmasi…";
+ try{await fetch(RSVP_ENDPOINT,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(data)});status.textContent="Terima kasih, konfirmasi sudah dikirim.";e.currentTarget.reset();}
+ catch(err){status.textContent="Gagal mengirim. Coba lagi beberapa saat lagi.";}
+});
+</script>
 </body>
 </html>
